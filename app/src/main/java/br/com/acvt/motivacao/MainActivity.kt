@@ -1,4 +1,4 @@
-package br.com.avaty.motivacao
+package br.com.acvt.motivacao
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

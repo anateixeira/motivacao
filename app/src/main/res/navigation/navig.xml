@@ -6,7 +6,7 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
-        android:name="br.com.avaty.motivacao.SplashFragment"
+        android:name="br.com.acvt.motivacao.SplashFragment"
         android:label="splash_fragment"
         tools:layout="@layout/splash_fragment" />
 </navigation>
