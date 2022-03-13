@@ -9,4 +9,8 @@
     <color name="teal_200">#FF80DEEA</color>
     <color name="teal_700">#0097A7</color>
 
+    <color name="main_color">#8E24AA</color>
+    <color name="button">#B39DDB</color>
+
+
 </resources>

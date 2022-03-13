@@ -1,10 +1,8 @@
-package br.com.acvt.motivacao
+package br.com.acvt.motivacao.presentation
 
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
 class SplashViewModel(private val app: Application) : AndroidViewModel(app) {
 

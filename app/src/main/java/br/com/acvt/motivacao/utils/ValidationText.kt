@@ -1,8 +1,9 @@
-package br.com.acvt.motivacao
+package br.com.acvt.motivacao.utils
 
 import android.text.Editable
 import android.text.TextWatcher
 import br.com.acvt.motivacao.databinding.SplashFragmentBinding
+import br.com.acvt.motivacao.presentation.SplashViewModel
 
 class ValidationText(val viewModel: SplashViewModel, val binding: SplashFragmentBinding) : TextWatcher {
 

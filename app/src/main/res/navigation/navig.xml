@@ -6,7 +6,20 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
-        android:name="br.com.acvt.motivacao.SplashFragment"
+        android:name="br.com.acvt.motivacao.presentation.SplashFragment"
         android:label="splash_fragment"
-        tools:layout="@layout/splash_fragment" />
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_initialFragment"
+            app:destination="@id/initialNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialNavFragment"
+        android:name="br.com.acvt.motivacao.presentation.PhraseScreenFragment"
+        android:label="initial_fragment"
+        tools:layout="@layout/initial_fragment" >
+        <action
+            android:id="@+id/action_initialNavFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
 </navigation>
