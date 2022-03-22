@@ -1,4 +1,4 @@
-package br.com.acvt.motivacao.presentation
+package br.com.acvt.motivacao.presenter
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -8,7 +8,6 @@ class SplashViewModel(private val app: Application) : AndroidViewModel(app) {
 
     val errorValidation by lazy { MutableLiveData<Boolean>() }
 
-    //contexto = sao as informações da sua aplicação
     fun validation(str : String){
         if(str.isEmpty()){
             errorValidation.value = true

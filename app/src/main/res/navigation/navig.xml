@@ -6,7 +6,7 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
-        android:name="br.com.acvt.motivacao.presentation.SplashFragment"
+        android:name="br.com.acvt.motivacao.presenter.SplashFragment"
         android:label="splash_fragment"
         tools:layout="@layout/splash_fragment" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/initialNavFragment"
-        android:name="br.com.acvt.motivacao.presentation.PhraseScreenFragment"
+        android:name="br.com.acvt.motivacao.presenter.PhraseScreenFragment"
         android:label="initial_fragment"
         tools:layout="@layout/initial_fragment" >
         <action

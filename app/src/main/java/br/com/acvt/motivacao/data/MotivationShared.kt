@@ -1,4 +1,4 @@
-package br.com.acvt.motivacao.model
+package br.com.acvt.motivacao.data
 
 import android.content.Context
 

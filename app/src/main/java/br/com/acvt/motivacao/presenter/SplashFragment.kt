@@ -1,4 +1,4 @@
-package br.com.acvt.motivacao.presentation
+package br.com.acvt.motivacao.presenter
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import br.com.acvt.motivacao.utils.ValidationText
 import br.com.acvt.motivacao.databinding.SplashFragmentBinding
-import br.com.acvt.motivacao.model.MotivationShared
+import br.com.acvt.motivacao.data.MotivationShared
 
 class SplashFragment : Fragment() {
 
