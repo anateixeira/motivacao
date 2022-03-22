@@ -10,14 +10,12 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import br.com.acvt.motivacao.utils.ValidationText
 import br.com.acvt.motivacao.databinding.SplashFragmentBinding
-import br.com.acvt.motivacao.data.MotivationShared
 
 class SplashFragment : Fragment() {
 
     private lateinit var viewModel: SplashViewModel
     private lateinit var binding: SplashFragmentBinding
 
-    private var mMotivationShared: MotivationShared? = null
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +23,6 @@ class SplashFragment : Fragment() {
     ): View? {
         viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
         binding = SplashFragmentBinding.inflate(inflater, container, false)
-        mMotivationShared = activity?.let { MotivationShared(it) }
 
         binding.apply {
             button.isEnabled = false
@@ -40,13 +37,22 @@ class SplashFragment : Fragment() {
         return binding.root
     }
 
-    fun clickButton() {
-        saveName(binding.editTextTextPersonName.text.toString());
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.verifyName()?.let{
+            goToNextSreen()
+        }
+    }
+
+    private fun clickButton() {
+        viewModel.saveName(binding.editTextTextPersonName.text.toString());
+        goToNextSreen()
+    }
+
+    private fun goToNextSreen(){
         val action = SplashFragmentDirections.actionSplashFragmentToInitialFragment()
         Navigation.findNavController(binding.root).navigate(action)
     }
 
-    fun saveName(name: String){
-        mMotivationShared?.storeString(MotivationShared.KEY_USERNAME, name)
-    }
+
 }
