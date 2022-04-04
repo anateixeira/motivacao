@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import br.com.acvt.motivacao.R
 import br.com.acvt.motivacao.data.Mock
 import br.com.acvt.motivacao.databinding.InitialFragmentBinding
-import br.com.acvt.motivacao.data.MotivationShared
+import br.com.acvt.motivacao.data.repository.MotivationShared
 import br.com.acvt.motivacao.data.PHRASEFILTER
 import br.com.acvt.motivacao.domain.PhrasesUsecase
 

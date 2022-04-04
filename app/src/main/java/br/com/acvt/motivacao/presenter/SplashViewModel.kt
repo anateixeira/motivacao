@@ -3,7 +3,7 @@ package br.com.acvt.motivacao.presenter
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import br.com.acvt.motivacao.data.MotivationShared
+import br.com.acvt.motivacao.data.repository.MotivationShared
 
 class SplashViewModel(private val app: Application) : AndroidViewModel(app) {
 
