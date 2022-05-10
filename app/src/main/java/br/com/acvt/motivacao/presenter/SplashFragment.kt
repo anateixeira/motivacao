@@ -1,27 +1,25 @@
 package br.com.acvt.motivacao.presenter
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
-import br.com.acvt.motivacao.utils.ValidationText
 import br.com.acvt.motivacao.databinding.SplashFragmentBinding
+import br.com.acvt.motivacao.utils.ValidationText
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashFragment : Fragment() {
 
-    private lateinit var viewModel: SplashViewModel
+    private val viewModel: SplashViewModel by viewModel()
     private lateinit var binding: SplashFragmentBinding
 
-
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
         binding = SplashFragmentBinding.inflate(inflater, container, false)
 
         binding.apply {
@@ -39,7 +37,7 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.verifyName()?.let{
+        viewModel.verifyName()?.let {
             goToNextSreen()
         }
     }
@@ -49,7 +47,7 @@ class SplashFragment : Fragment() {
         goToNextSreen()
     }
 
-    private fun goToNextSreen(){
+    private fun goToNextSreen() {
         val action = SplashFragmentDirections.actionSplashFragmentToInitialFragment()
         Navigation.findNavController(binding.root).navigate(action)
     }
